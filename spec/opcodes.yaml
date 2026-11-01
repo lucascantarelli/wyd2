@@ -1,0 +1,1221 @@
+# Registro de opcodes do WYD (gerado automaticamente).
+#
+# Fonte: reference/w2pp-OpenWYD/Source/Code/Basedef.h
+# Gerado por: scripts/extract_opcodes.py -- NAO editar a mao.
+#
+# `value` e o valor de fio (base | flags). `base` e o valor sem flags.
+# `directions` traduz os bits FLAG_*; a mesma base pode aparecer em
+# familias diferentes, e as flags que desambiguam.
+
+source: reference/w2pp-OpenWYD/Source/Code/Basedef.h
+count: 197
+opcodes:
+  - constant: _MSG_MessagePanel
+    value: 257
+    hex: '0x0101'
+    base: 1
+    directions: [game_to_client]
+    core: true
+  - constant: _MSG_MessageBoxOk
+    value: 258
+    hex: '0x0102'
+    base: 2
+    directions: [game_to_client]
+    core: true
+  - constant: _MSG_CNFAccountLogin
+    value: 266
+    hex: '0x010A'
+    base: 10
+    directions: [game_to_client]
+    core: true
+  - constant: _MSG_CNFNewCharacter
+    value: 272
+    hex: '0x0110'
+    base: 16
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_CNFDeleteCharacter
+    value: 274
+    hex: '0x0112'
+    base: 18
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_CNFCharacterLogin
+    value: 276
+    hex: '0x0114'
+    base: 20
+    directions: [game_to_client]
+    core: true
+  - constant: _MSG_CNFCharacterLogout
+    value: 278
+    hex: '0x0116'
+    base: 22
+    directions: [game_to_client]
+    core: true
+  - constant: _MSG_NewAccountFail
+    value: 279
+    hex: '0x0117'
+    base: 23
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_CharacterLoginFail
+    value: 281
+    hex: '0x0119'
+    base: 25
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_NewCharacterFail
+    value: 282
+    hex: '0x011A'
+    base: 26
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_DeleteCharacterFail
+    value: 283
+    hex: '0x011B'
+    base: 27
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_AlreadyPlaying
+    value: 284
+    hex: '0x011C'
+    base: 28
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_StillPlaying
+    value: 285
+    hex: '0x011D'
+    base: 29
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_RemoveMob
+    value: 357
+    hex: '0x0165'
+    base: 101
+    directions: [game_to_client]
+    core: true
+  - constant: _MSG_PKInfo
+    value: 358
+    hex: '0x0166'
+    base: 102
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_DecayItem
+    value: 367
+    hex: '0x016F'
+    base: 111
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_CNFGetItem
+    value: 369
+    hex: '0x0171'
+    base: 113
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_CNFDropItem
+    value: 373
+    hex: '0x0175'
+    base: 117
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_ShopList
+    value: 380
+    hex: '0x017C'
+    base: 124
+    directions: [game_to_client]
+    core: true
+  - constant: _MSG_SetHpMp
+    value: 385
+    hex: '0x0181'
+    base: 129
+    directions: [game_to_client]
+    core: true
+  - constant: _MSG_SendItem
+    value: 386
+    hex: '0x0182'
+    base: 130
+    directions: [game_to_client]
+    core: true
+  - constant: _MSG_UpdateCarry
+    value: 389
+    hex: '0x0185'
+    base: 133
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_SetHpDam
+    value: 394
+    hex: '0x018A'
+    base: 138
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_UpdateWeather
+    value: 395
+    hex: '0x018B'
+    base: 139
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_ReqChallange
+    value: 397
+    hex: '0x018D'
+    base: 141
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_SetClan
+    value: 403
+    hex: '0x0193'
+    base: 147
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_CloseShop
+    value: 406
+    hex: '0x0196'
+    base: 150
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_AccountLogin
+    value: 525
+    hex: '0x020D'
+    base: 13
+    directions: [client_to_game]
+    handler: Exec_MSG_AccountLogin
+    core: true
+  - constant: _MSG_CreateCharacter
+    value: 527
+    hex: '0x020F'
+    base: 15
+    directions: [client_to_game]
+    handler: Exec_MSG_CreateCharacter
+    core: true
+  - constant: _MSG_DeleteCharacter
+    value: 529
+    hex: '0x0211'
+    base: 17
+    directions: [client_to_game]
+    handler: Exec_MSG_DeleteCharacter
+    core: true
+  - constant: _MSG_CharacterLogin
+    value: 531
+    hex: '0x0213'
+    base: 19
+    directions: [client_to_game]
+    handler: Exec_MSG_CharacterLogin
+    core: true
+  - constant: _MSG_CharacterLogout
+    value: 533
+    hex: '0x0215'
+    base: 21
+    directions: [client_to_game]
+    handler: Exec_MSG_CharacterLogout
+    core: true
+  - constant: _MSG_CreateItem
+    value: 622
+    hex: '0x026E'
+    base: 110
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_GetItem
+    value: 624
+    hex: '0x0270'
+    base: 112
+    directions: [client_to_game]
+    handler: Exec_MSG_GetItem
+    core: true
+  - constant: _MSG_DropItem
+    value: 626
+    hex: '0x0272'
+    base: 114
+    directions: [client_to_game]
+    handler: Exec_MSG_DropItem
+    core: true
+  - constant: _MSG_ApplyBonus
+    value: 631
+    hex: '0x0277'
+    base: 119
+    directions: [client_to_game]
+    handler: Exec_MSG_ApplyBonus
+    core: true
+  - constant: _MSG_REQShopList
+    value: 635
+    hex: '0x027B'
+    base: 123
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_Restart
+    value: 649
+    hex: '0x0289'
+    base: 137
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_Quest
+    value: 651
+    hex: '0x028B'
+    base: 139
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_Deprivate
+    value: 652
+    hex: '0x028C'
+    base: 140
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_Challange
+    value: 654
+    hex: '0x028E'
+    base: 142
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_ChallangeConfirm
+    value: 655
+    hex: '0x028F'
+    base: 143
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_ReqTeleport
+    value: 656
+    hex: '0x0290'
+    base: 144
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_ChangeCity
+    value: 657
+    hex: '0x0291'
+    base: 145
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_SetHpMode
+    value: 658
+    hex: '0x0292'
+    base: 146
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_CombineItemLindy
+    value: 707
+    hex: '0x02C3'
+    base: 195
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_CombineItemShany
+    value: 708
+    hex: '0x02C4'
+    base: 196
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_CapsuleInfo
+    value: 717
+    hex: '0x02CD'
+    base: 205
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_CombineItemOdin
+    value: 722
+    hex: '0x02D2'
+    base: 210
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_CombineItemEhre
+    value: 723
+    hex: '0x02D3'
+    base: 211
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_CombineItemExtracao
+    value: 724
+    hex: '0x02D4'
+    base: 212
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_CombineItemLoki
+    value: 725
+    hex: '0x02D5'
+    base: 213
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_CombineItemAlquimia
+    value: 737
+    hex: '0x02E1'
+    base: 225
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_CombineItemOdin2
+    value: 738
+    hex: '0x02E2'
+    base: 226
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_DeleteItem
+    value: 740
+    hex: '0x02E4'
+    base: 228
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_SplitItem
+    value: 741
+    hex: '0x02E5'
+    base: 229
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_CombineDedekinto
+    value: 742
+    hex: '0x02E6'
+    base: 230
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_CombineDedekinto2
+    value: 745
+    hex: '0x02E9'
+    base: 233
+    directions: [client_to_game]
+    core: false
+  - constant: _MSG_MessageChat
+    value: 819
+    hex: '0x0333'
+    base: 51
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_MessageChat
+    core: true
+  - constant: _MSG_MessageWhisper
+    value: 820
+    hex: '0x0334'
+    base: 52
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_MessageWhisper
+    core: true
+  - constant: _MSG_UpdateScore
+    value: 822
+    hex: '0x0336'
+    base: 54
+    directions: [game_to_client, client_to_game]
+    core: true
+  - constant: _MSG_UpdateEtc
+    value: 823
+    hex: '0x0337'
+    base: 55
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_CNFMobKill
+    value: 824
+    hex: '0x0338'
+    base: 56
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_UpdateCargoCoin
+    value: 825
+    hex: '0x0339'
+    base: 57
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_DisableExpMsg
+    value: 845
+    hex: '0x034D'
+    base: 589
+    directions: [game_to_client]
+    core: false
+  - constant: _MSG_CreateMobTrade
+    value: 867
+    hex: '0x0363'
+    base: 99
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_CreateMob
+    value: 868
+    hex: '0x0364'
+    base: 100
+    directions: [game_to_client, client_to_game]
+    core: true
+  - constant: _MSG_Action2
+    value: 870
+    hex: '0x0366'
+    base: 102
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_Action
+    core: true
+  - constant: _MSG_Attack
+    value: 871
+    hex: '0x0367'
+    base: 103
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_Attack
+    core: true
+  - constant: _MSG_Action3
+    value: 872
+    hex: '0x0368'
+    base: 104
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_Action
+    core: true
+  - constant: _MSG_NoViewMob
+    value: 873
+    hex: '0x0369'
+    base: 105
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_Motion
+    value: 874
+    hex: '0x036A'
+    base: 106
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_UpdateEquip
+    value: 875
+    hex: '0x036B'
+    base: 107
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_Action
+    value: 876
+    hex: '0x036C'
+    base: 108
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_Action
+    core: true
+  - constant: _MSG_UseItem
+    value: 883
+    hex: '0x0373'
+    base: 115
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_UseItem
+    core: true
+  - constant: _MSG_UpdateItem
+    value: 884
+    hex: '0x0374'
+    base: 116
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_TradingItem
+    value: 886
+    hex: '0x0376'
+    base: 118
+    directions: [client_to_game, game_to_client]
+    handler: Exec_MSG_TradingItem
+    core: true
+  - constant: _MSG_SetShortSkill
+    value: 888
+    hex: '0x0378'
+    base: 120
+    directions: [client_to_game, game_to_client]
+    core: false
+  - constant: _MSG_Buy
+    value: 889
+    hex: '0x0379'
+    base: 121
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_Buy
+    core: true
+  - constant: _MSG_Sell
+    value: 890
+    hex: '0x037A'
+    base: 122
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_Sell
+    core: true
+  - constant: _MSG_CNFAddParty
+    value: 893
+    hex: '0x037D'
+    base: 125
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_RemoveParty
+    value: 894
+    hex: '0x037E'
+    base: 126
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_SendReqParty
+    value: 895
+    hex: '0x037F'
+    base: 127
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_Trade
+    value: 899
+    hex: '0x0383'
+    base: 131
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_Trade
+    core: true
+  - constant: _MSG_QuitTrade
+    value: 900
+    hex: '0x0384'
+    base: 132
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_QuitTrade
+    core: true
+  - constant: _MSG_CNFCheck
+    value: 902
+    hex: '0x0386'
+    base: 134
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_Withdraw
+    value: 903
+    hex: '0x0387'
+    base: 135
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_Withdraw
+    core: true
+  - constant: _MSG_Deposit
+    value: 904
+    hex: '0x0388'
+    base: 136
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_Deposit
+    core: true
+  - constant: _MSG_SendAutoTrade
+    value: 919
+    hex: '0x0397'
+    base: 151
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_ReqBuy
+    value: 920
+    hex: '0x0398'
+    base: 152
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_PKMode
+    value: 921
+    hex: '0x0399'
+    base: 153
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_ReqTradeList
+    value: 922
+    hex: '0x039A'
+    base: 154
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_ItemSold
+    value: 923
+    hex: '0x039B'
+    base: 155
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_AttackOne
+    value: 925
+    hex: '0x039D'
+    base: 157
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_Attack
+    core: true
+  - constant: _MSG_AttackTwo
+    value: 926
+    hex: '0x039E'
+    base: 158
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_Attack
+    core: true
+  - constant: _MSG_ReqRanking
+    value: 927
+    hex: '0x039F'
+    base: 159
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_Ping
+    value: 928
+    hex: '0x03A0'
+    base: 160
+    directions: [game_to_client, client_to_game]
+    handler: (no-op)
+    core: true
+  - constant: _MSG_StartTime
+    value: 929
+    hex: '0x03A1'
+    base: 161
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_EnvEffect
+    value: 930
+    hex: '0x03A2'
+    base: 162
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_SoundEffect
+    value: 931
+    hex: '0x03A3'
+    base: 163
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_GuildDisable
+    value: 932
+    hex: '0x03A4'
+    base: 164
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_GuildBoard
+    value: 933
+    hex: '0x03A5'
+    base: 165
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_CombineItem
+    value: 934
+    hex: '0x03A6'
+    base: 166
+    directions: [game_to_client, client_to_game]
+    handler: Exec_MSG_CombineItem
+    core: true
+  - constant: _MSG_CombineComplete
+    value: 935
+    hex: '0x03A7'
+    base: 167
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_SendWarInfo
+    value: 936
+    hex: '0x03A8'
+    base: 168
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_AcceptParty
+    value: 939
+    hex: '0x03AB'
+    base: 171
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_SendCastleState
+    value: 940
+    hex: '0x03AC'
+    base: 172
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_SendCastleState2
+    value: 941
+    hex: '0x03AD'
+    base: 173
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_MobLeft
+    value: 944
+    hex: '0x03B0'
+    base: 176
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_SendArchEffect
+    value: 948
+    hex: '0x03B4'
+    base: 180
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_CombineItemAilyn
+    value: 949
+    hex: '0x03B5'
+    base: 181
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_SendAffect
+    value: 953
+    hex: '0x03B9'
+    base: 185
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_CombineItemAgatha
+    value: 954
+    hex: '0x03BA'
+    base: 186
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_MobCount
+    value: 955
+    hex: '0x03BB'
+    base: 187
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_CombineItemTiny
+    value: 960
+    hex: '0x03C0'
+    base: 192
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_PutoutSeal
+    value: 972
+    hex: '0x03CC'
+    base: 204
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_InviteGuild
+    value: 981
+    hex: '0x03D5'
+    base: 213
+    directions: [game_to_client, client_to_game]
+    core: false
+  - constant: _MSG_DBMessagePanel
+    value: 1025
+    hex: '0x0401'
+    base: 1
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBMessageBoxOk
+    value: 1026
+    hex: '0x0402'
+    base: 2
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBSavingQuit
+    value: 1034
+    hex: '0x040A'
+    base: 10
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBCNFAccountLogOut
+    value: 1035
+    hex: '0x040B'
+    base: 11
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBCNFArchCharacterSucess
+    value: 1038
+    hex: '0x040E'
+    base: 14
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBCNFArchCharacterFail
+    value: 1039
+    hex: '0x040F'
+    base: 15
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBCNFCapsuleCharacterFail
+    value: 1040
+    hex: '0x0410'
+    base: 16
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBCNFCapsuleCharacterFail2
+    value: 1041
+    hex: '0x0411'
+    base: 17
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBCNFCapsuleSucess
+    value: 1042
+    hex: '0x0412'
+    base: 18
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBClientMessage
+    value: 1043
+    hex: '0x0413'
+    base: 19
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBCheckPrimaryAccount
+    value: 1044
+    hex: '0x0414'
+    base: 20
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBCNFAccountLogin
+    value: 1046
+    hex: '0x0416'
+    base: 22
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBCNFCharacterLogin
+    value: 1047
+    hex: '0x0417'
+    base: 23
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBCNFNewCharacter
+    value: 1048
+    hex: '0x0418'
+    base: 24
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBCNFDeleteCharacter
+    value: 1049
+    hex: '0x0419'
+    base: 25
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBNewAccountFail
+    value: 1050
+    hex: '0x041A'
+    base: 26
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBCharacterLoginFail
+    value: 1052
+    hex: '0x041C'
+    base: 28
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBNewCharacterFail
+    value: 1053
+    hex: '0x041D'
+    base: 29
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBDeleteCharacterFail
+    value: 1054
+    hex: '0x041E'
+    base: 30
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBAlreadyPlaying
+    value: 1055
+    hex: '0x041F'
+    base: 31
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBStillPlaying
+    value: 1056
+    hex: '0x0420'
+    base: 32
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBAccountLoginFail_Account
+    value: 1057
+    hex: '0x0421'
+    base: 33
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBAccountLoginFail_Pass
+    value: 1058
+    hex: '0x0422'
+    base: 34
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBSetIndex
+    value: 1059
+    hex: '0x0423'
+    base: 35
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBAccountLoginFail_Block
+    value: 1060
+    hex: '0x0424'
+    base: 36
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBAccountLoginFail_Disable
+    value: 1061
+    hex: '0x0425'
+    base: 37
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBOnlyOncePerDay
+    value: 1062
+    hex: '0x0426'
+    base: 38
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_GuildReport
+    value: 1063
+    hex: '0x0427'
+    base: 39
+    directions: [db_to_game]
+    core: false
+  - constant: _MSG_DBCNFServerChange
+    value: 1322
+    hex: '0x052A'
+    base: 42
+    directions: [db_to_game, game_to_client]
+    core: false
+  - constant: _MSG_DBServerSend1
+    value: 1323
+    hex: '0x052B'
+    base: 43
+    directions: [db_to_game, game_to_client]
+    core: false
+  - constant: _MSG_TransperCharacter
+    value: 1961
+    hex: '0x07A9'
+    base: 169
+    directions: [game_to_client, client_to_game, db_to_game]
+    core: false
+  - constant: _MSG_DBNewAccount
+    value: 2049
+    hex: '0x0801'
+    base: 1
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_DBCreateCharacter
+    value: 2050
+    hex: '0x0802'
+    base: 2
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_DBAccountLogin
+    value: 2051
+    hex: '0x0803'
+    base: 3
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_DBCharacterLogin
+    value: 2052
+    hex: '0x0804'
+    base: 4
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_DBNoNeedSave
+    value: 2053
+    hex: '0x0805'
+    base: 5
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_SavingQuit
+    value: 2054
+    hex: '0x0806'
+    base: 6
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_DBSaveMob
+    value: 2055
+    hex: '0x0807'
+    base: 7
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_DBDeleteCharacter
+    value: 2057
+    hex: '0x0809'
+    base: 9
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_DBUpdateSapphire
+    value: 2058
+    hex: '0x080A'
+    base: 10
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_MessageDBRecord
+    value: 2060
+    hex: '0x080C'
+    base: 12
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_GuildZoneReport
+    value: 2061
+    hex: '0x080D'
+    base: 13
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_DBServerChange
+    value: 2068
+    hex: '0x0814'
+    base: 20
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_DBItemDayLog
+    value: 2069
+    hex: '0x0815'
+    base: 21
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_DBActivatePinCode
+    value: 2070
+    hex: '0x0816'
+    base: 22
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_DBPrimaryAccount
+    value: 2071
+    hex: '0x0817'
+    base: 23
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_DBCreateArchCharacter
+    value: 2079
+    hex: '0x081F'
+    base: 31
+    directions: [game_to_db]
+    core: false
+  - constant: _S_SSP_REQ_DIVINE_END_
+    value: 2369
+    hex: '0x0941'
+    base: 321
+    directions: [game_to_db]
+    core: false
+  - constant: _MSG_MasterGriff
+    value: 2777
+    hex: '0x0AD9'
+    base: 217
+    directions: [game_to_db, client_to_game]
+    core: false
+  - constant: _MSG_MessageDBImple
+    value: 3083
+    hex: '0x0C0B'
+    base: 11
+    directions: [game_to_db, db_to_game]
+    core: false
+  - constant: _MSG_DBSendItem
+    value: 3087
+    hex: '0x0C0F'
+    base: 15
+    directions: [game_to_db, db_to_game]
+    core: false
+  - constant: _MSG_DBSendDonate
+    value: 3089
+    hex: '0x0C11'
+    base: 17
+    directions: [game_to_db, db_to_game]
+    core: false
+  - constant: _MSG_DBCapsuleInfo
+    value: 3132
+    hex: '0x0C3C'
+    base: 60
+    directions: [db_to_game, game_to_db]
+    core: false
+  - constant: _MSG_DBPutInCapsule
+    value: 3133
+    hex: '0x0C3D'
+    base: 61
+    directions: [db_to_game, game_to_db]
+    core: false
+  - constant: _MSG_DBOutCapsule
+    value: 3134
+    hex: '0x0C3E'
+    base: 62
+    directions: [db_to_game, game_to_db]
+    core: false
+  - constant: _MSG_MagicTrumpet
+    value: 3357
+    hex: '0x0D1D'
+    base: 29
+    directions: [db_to_game, game_to_db, game_to_client]
+    core: false
+  - constant: _MSG_DBNotice
+    value: 3358
+    hex: '0x0D1E'
+    base: 30
+    directions: [db_to_game, game_to_db, game_to_client]
+    core: false
+  - constant: _MSG_CNFDBCapsuleInfo
+    value: 3359
+    hex: '0x0D1F'
+    base: 31
+    directions: [db_to_game, game_to_db, game_to_client]
+    core: false
+  - constant: _MSG_War
+    value: 3598
+    hex: '0x0E0E'
+    base: 14
+    directions: [client_to_game, db_to_game, game_to_db]
+    core: false
+  - constant: _MSG_GuildAlly
+    value: 3602
+    hex: '0x0E12'
+    base: 18
+    directions: [client_to_game, db_to_game, game_to_db]
+    core: false
+  - constant: _MSG_GuildInfo
+    value: 3603
+    hex: '0x0E13'
+    base: 19
+    directions: [client_to_game, db_to_game, game_to_db]
+    core: false
+  - constant: _MSG_ReqTransper
+    value: 4010
+    hex: '0x0FAA'
+    base: 170
+    directions: [game_to_client, client_to_game, db_to_game, game_to_db]
+    core: false
+  - constant: _MSG_AccountSecure
+    value: 4062
+    hex: '0x0FDE'
+    base: 222
+    directions: [db_to_game, game_to_db, client_to_game, game_to_client]
+    handler: Exec_MSG_AccountSecure
+    core: true
+  - constant: _MSG_AccountSecureFail
+    value: 4063
+    hex: '0x0FDF'
+    base: 223
+    directions: [db_to_game, game_to_db, client_to_game, game_to_client]
+    core: false
+  - constant: _MSG_NPReqIDPASS
+    value: 4097
+    hex: '0x1001'
+    base: 1
+    directions: [db_to_np]
+    core: false
+  - constant: _MSG_NPNotFound
+    value: 4100
+    hex: '0x1004'
+    base: 4
+    directions: [db_to_np]
+    core: false
+  - constant: _MSG_NPAccountInfo
+    value: 4101
+    hex: '0x1005'
+    base: 5
+    directions: [db_to_np]
+    core: false
+  - constant: _MSG_NPAppeal
+    value: 7184
+    hex: '0x1C10'
+    base: 16
+    directions: [db_to_game, game_to_db, db_to_np]
+    core: false
+  - constant: _MSG_NPIDPASS
+    value: 8194
+    hex: '0x2002'
+    base: 2
+    directions: [np_to_db]
+    core: false
+  - constant: _MSG_NPReqAccount
+    value: 8195
+    hex: '0x2003'
+    base: 3
+    directions: [np_to_db]
+    core: false
+  - constant: _MSG_NPReqSaveAccount
+    value: 8198
+    hex: '0x2006'
+    base: 6
+    directions: [np_to_db]
+    core: false
+  - constant: _MSG_NPDisable
+    value: 12295
+    hex: '0x3007'
+    base: 7
+    directions: [np_to_db, db_to_np]
+    core: false
+  - constant: _MSG_NPEnable
+    value: 12296
+    hex: '0x3008'
+    base: 8
+    directions: [np_to_db, db_to_np]
+    core: false
+  - constant: _MSG_NPState
+    value: 12298
+    hex: '0x300A'
+    base: 10
+    directions: [np_to_db, db_to_np]
+    core: false
+  - constant: _MSG_NPCreateCharacter
+    value: 12299
+    hex: '0x300B'
+    base: 11
+    directions: [np_to_db, db_to_np]
+    core: false
+  - constant: _MSG_NPCreateCharacter_Reply
+    value: 12300
+    hex: '0x300C'
+    base: 12
+    directions: [db_to_np, np_to_db]
+    core: false
+  - constant: _MSG_NPDonate
+    value: 12301
+    hex: '0x300D'
+    base: 13
+    directions: [np_to_db, db_to_np]
+    core: false
+  - constant: _MSG_NPNotice
+    value: 13321
+    hex: '0x3409'
+    base: 9
+    directions: [np_to_db, db_to_np, db_to_game]
+    core: false
+  - constant: _MSG_GrindRankingData
+    value: 17665
+    hex: '0x4501'
+    base: 1
+    directions: [new_family, db_to_game, game_to_client]
+    core: false
+  - constant: _MSG_UpdateExpRanking
+    value: 19714
+    hex: '0x4D02'
+    base: 2
+    directions: [new_family, db_to_game, game_to_db, game_to_client]
+    core: false

@@ -1,0 +1,21 @@
+# Fonte de referencia (GPLv3, derivada de decompilacao). Nao faz parte do
+# artefato distribuido deste projeto -- ver docs/01-FONTES-E-METODOLOGIA.md.
+reference/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Pacote de importacao (contem hashes de senha; nunca versionar)
+out/
+
+# Build Rust do gateway
+gateway/target/
+
+# Scratch local (harnesses de validacao, node_modules de PGlite)
+.tmp/
+
+# Sistema
+.DS_Store
+Thumbs.db

@@ -1,0 +1,118 @@
+# Constantes do WYD 7.xx (build 7662 / protocolo 7640)
+#
+# Todas as entradas abaixo foram lidas da fonte de referencia e citam
+# arquivo:linha. Valores marcados como "inferred" nao foram confirmados
+# por captura de trafego.
+
+transport:
+  initcode: 0x1F11F311          # CPSock.h:40 -- 4 bytes crus no inicio da conexao
+  header_size: 12               # CPSock.h:42-50
+  max_message_size: 8192        # CPSock.h:38
+  recv_buffer_size: 131072      # CPSock.h:35
+  send_buffer_size: 131072      # CPSock.h:36
+  app_version: 7640             # Basedef.h:102 -- valor em MSG_AccountLogin.ClientVersion
+  build_name: 7662              # nome do executavel / ClientPatch
+  skip_check_tick: 235543242    # Basedef.h:232 -- pacotes do cliente com este tick sao descartados
+  max_user: 1000                # Basedef.h:116 -- slots 0..999
+  billing_packet_size: 196      # CPSock.h:88-92 -- link TMSrv<->BISrv, sem header
+
+limits:
+  max_level: 399                # Basedef.h:177 -- Mortal/Arch
+  max_clevel: 199               # Basedef.h:178 -- Celestial/Sub-Celestial
+  max_damage: 1000000000        # Basedef.h:265
+  max_damage_magic: 1000000000  # Basedef.h:266
+  max_target: 13                # Basedef.h:233
+  max_skill: 24                 # Basedef.h:171
+  max_route: 24                 # Basedef.h:184
+  max_trade: 15                 # Basedef.h:139
+  max_equip: 16                 # Basedef.h:135
+  max_carry: 64
+  max_cargo: 128
+  max_affect: 32
+  mob_per_account: 4            # Basedef.h:131
+  max_party: 12
+
+classes:
+  0: TransKnight
+  1: Foema
+  2: BeastMaster
+  3: Huntress
+
+combat:
+  damage:
+    ac_mitigation_divisor: 2          # Basedef.cpp:1267 -- tdam = dam - ac/2
+    melee_combat_cap: 7               # Basedef.cpp:1273 -- apos combat/2
+    melee_roll_min_base: 99           # Basedef.cpp:1275 -- rand()%(12-combat) + combat + 99
+    melee_roll_span: 12
+    skill_combat_cap: 15              # Basedef.cpp:1493
+    skill_roll_min_base: 90           # Basedef.cpp:1493
+    skill_roll_span: 21
+    min_damage: 1                     # Basedef.cpp:1294 / 1515
+    pvp_ac_multiplier: 3              # _MSG_Attack.cpp:455
+    critical_total_multiplier: 2      # _MSG_Attack.cpp:480 -- DoubleCritical & 1
+    critical_partial_player: [13, 14] # _MSG_Attack.cpp:447 -- /10
+    critical_partial_mob: [15, 16]    # _MSG_Attack.cpp:449 -- /10
+    reflect_pvp: flat_then_percent    # _MSG_Attack.cpp:1496-1508
+  hit:
+    parry_roll: 1000                  # _MSG_Attack.cpp:1423 -- rand()%1000+1
+    parry_cap: 650                    # GetFunc.cpp:721
+    parry_min: 1                      # GetFunc.cpp:723
+    attackdex_divisor: 5              # _MSG_Attack.cpp:1408 -- Dex/5
+    attackdex_skill_bonus: 100        # _MSG_Attack.cpp:1410 -- LearnedSkill & 0x1000000
+    attackdex_rsv_bonus: 500          # _MSG_Attack.cpp:1413 -- Rsv & 0x40
+    miss_code: -3                     # _MSG_Attack.cpp:1427
+    block_code: -4                    # _MSG_Attack.cpp:1430
+  hp_mp_per_level:
+    TransKnight: {hp: 3, mp: 1}       # Basedef.cpp:61-62
+    Foema:       {hp: 1, mp: 3}
+    BeastMaster: {hp: 1, mp: 2}
+    Huntress:    {hp: 2, mp: 1}
+  attribute_points:
+    con_to_max_hp: 2                  # _MSG_ApplyBonus.cpp:52-54
+    int_to_max_mp: 2                  # _MSG_ApplyBonus.cpp:45-47
+    bulk_apply_threshold: 300         # _MSG_ApplyBonus.cpp:40
+    bulk_apply_amount: 100
+
+progression:
+  mortal_points_per_level: 5          # Basedef.cpp:930
+  arch_points_per_level: 6            # Basedef.cpp:960
+  celestial_points_per_level: 6       # Basedef.cpp:990
+  celestial_base_points: 1001         # Basedef.cpp:995
+  celestial_arch_level_bonus:         # Basedef.cpp:999-1016
+    1: 100
+    2: 300
+    3: 600
+    4: 900
+    5: 1200
+  exp_pve_divisor_base: 30            # MobKilled.cpp:1283 -- 450*isExp/(30+level)
+  exp_pve_factor: 450
+  exp_pve_final_cut: 0.6              # MobKilled.cpp:1358 -- 6*exp/10
+
+refine:
+  sanc_effect: 43                     # ItemEffect.h:100 -- EF_SANC
+  volatile_effect: 38                 # ItemEffect.h:94 -- EF_VOLATILE
+  nosanc_effect: 126                  # ItemEffect.h:126
+  dust_ori: 412                        # sIndex
+  dust_lac: 413
+  lactolerium_100: 4141
+  combine_roll_modulus: 115            # _MSG_CombineItem.cpp:80
+  combine_roll_fold_threshold: 100     # :81-82 -- >=100 -> -15
+  combine_roll_fold_amount: 15
+  pity_table: [5, 5, 5, 5, 4, 4, 3, 3, 2, 1, 0]   # Basedef.cpp:122
+  sanc_index_offset: 1                 # Basedef.cpp:2261 -- tabela lida em sanc+1 (off-by-one)
+  sanc_packed:
+    levels_0_9: "nivel + 10*pity"      # Basedef.cpp:2282
+    level_10: 230                      # + gem 0..3
+    level_11: 234
+    level_12: 238
+    level_13: 242
+    level_14: 246
+    level_15: 250
+  limits:
+    sealed_max: 9                      # _MSG_UseItem.cpp:227
+    ori_max: 6                         # _MSG_UseItem.cpp:203
+
+drops:
+  gold_cap_per_kill: 2000              # MobKilled.cpp:2713
+  gold_cap_total: 2000000000           # MobKilled.cpp:2715
+  rate_is_divisor: true                # quanto maior g_pDropRate, mais raro

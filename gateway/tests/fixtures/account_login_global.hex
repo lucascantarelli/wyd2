@@ -1,0 +1,12 @@
+# Golden vector do handshake do cliente WYD Global: INITCODE (4 B) + frame
+# de 124 B (header de 12 B + MSG_AccountLogin de 112 B).
+#
+# Derivado da captura de 2026-11-01 (docs/08-CLIENTE-ALVO.md secao 6.1):
+# mesmo INITCODE, Type 0x020D, id 0, ClientTick 656429 e KeyWord 0xEB.
+# O corpo e sintetico: TestAccount/Secret123!, o token de 22 B em 0x58 foi
+# zerado e o CheckSum foi recalculado pelo codec. Nenhuma credencial real,
+# nenhum identificador da maquina.
+11f3111f7c00eb6513ee38fd29f5c6fd9d56576f8765212f4112f4fc46520770
+5f54636baf6bd8fdfaf1f8fc1ef1f4fcfaebf4fffaeaf4fb18f194fd72f3f4fc
+18ecfcfdf4f118fdf2fd54fefafff0fdfaf194fdfaf144fdf8f1bcfdfaf9f4fd
+fba49109fbf1f4fdf2f1f4f9c2f418fdbaeff4fd1ce4f8fdf2e40c00f6f100fc

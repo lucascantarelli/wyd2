@@ -1,0 +1,112 @@
+{
+  "_source": "reference/w2pp-OpenWYD/Source/Code/Basedef.cpp",
+  "_note": "Valores lidos diretamente dos arrays C. g_pNextLevel cobre Mortal/Arch (MAX_LEVEL=399); g_pNextLevel_2 cobre Celestial/Sub-Celestial (MAX_CLEVEL=199). O indice e o nivel e o valor e o XP acumulado.",
+  "max_level": 399,
+  "max_clevel": 199,
+  "hp_per_level_by_class": {
+    "TK": 3,
+    "FM": 1,
+    "BM": 1,
+    "HT": 2
+  },
+  "mp_per_level_by_class": {
+    "TK": 1,
+    "FM": 3,
+    "BM": 2,
+    "HT": 1
+  },
+  "sanc_rate": {
+    "_shape": "[PO, PL, Amago][indice lido como sanc+1]",
+    "PO": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "PL": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      0,
+      0
+    ],
+    "Amago": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      80,
+      80
+    ]
+  },
+  "pity_rate": [
+    5,
+    5,
+    5,
+    5,
+    4,
+    4,
+    3,
+    3,
+    2,
+    1,
+    0
+  ],
+  "celestial_rate": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    70,
+    50,
+    40,
+    40,
+    40,
+    10,
+    5
+  ],
+  "odin_rate": [
+    100,
+    35,
+    100,
+    40,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    100
+  ],
+  "anct_chance": {
+    "+7": 2,
+    "+8": 4,
+    "+9": 10
+  }
+}

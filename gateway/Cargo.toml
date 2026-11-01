@@ -1,0 +1,23 @@
+[package]
+name = "wyd-gateway"
+version = "0.1.0"
+edition = "2021"
+description = "PoC do gateway de transporte WYD (Fase 3)"
+publish = false
+
+[lib]
+name = "wyd_gateway"
+path = "src/lib.rs"
+
+[[bin]]
+name = "wyd-gateway"
+path = "src/main.rs"
+
+[dependencies]
+argon2 = "0.5"
+base64 = "0.22"
+pbkdf2 = "0.12"
+thiserror = "1"
+postgres = "0.19"
+sha2 = "0.10"
+tokio = { version = "1", features = ["rt", "sync", "net", "time", "macros", "rt-multi-thread"] }

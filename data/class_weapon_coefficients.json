@@ -1,0 +1,710 @@
+{
+  "_source": "reference/w2pp-OpenWYD/Source/Code/Basedef.cpp (bloco // Balanceamento)",
+  "_note": "Coeficientes aplicados a CurrentScore.Damage ou a variavel `magic` em BASE_GetCurrentScore. Cada gate e uma skill aprendida (bit em LearnedSkill); a tabela se repete por gate, por isso as linhas estao deduplicadas.",
+  "classes": {
+    "TransKnight": [
+      {
+        "weapon_unique": 43,
+        "weapon": "Garra",
+        "kind": "physical",
+        "dex_coefficient": 0.38,
+        "str_coefficient": 0.42,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Confiança"
+          },
+          {
+            "bit": 15,
+            "name": "Trans"
+          },
+          {
+            "bit": 23,
+            "name": "Espada Mágica"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 42,
+        "weapon": "Arco",
+        "kind": "physical",
+        "dex_coefficient": 0.55,
+        "str_coefficient": 0.6,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Confiança"
+          },
+          {
+            "bit": 15,
+            "name": "Trans"
+          },
+          {
+            "bit": 23,
+            "name": "Espada Mágica"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 46,
+        "weapon": "Hermai",
+        "kind": "physical",
+        "dex_coefficient": 0.36,
+        "str_coefficient": 0.4,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Confiança"
+          },
+          {
+            "bit": 15,
+            "name": "Trans"
+          },
+          {
+            "bit": 23,
+            "name": "Espada Mágica"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 48,
+        "weapon": "Espada 2 maos",
+        "kind": "physical",
+        "dex_coefficient": 0.56,
+        "str_coefficient": 0.6,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Confiança"
+          },
+          {
+            "bit": 15,
+            "name": "Trans"
+          },
+          {
+            "bit": 23,
+            "name": "Espada Mágica"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 49,
+        "weapon": "Martelo",
+        "kind": "physical",
+        "dex_coefficient": 0.43,
+        "str_coefficient": 0.47,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Confiança"
+          },
+          {
+            "bit": 15,
+            "name": "Trans"
+          },
+          {
+            "bit": 23,
+            "name": "Espada Mágica"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 45,
+        "weapon": "Caliburn",
+        "kind": "physical",
+        "dex_coefficient": 0.22,
+        "str_coefficient": 0.27,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Confiança"
+          },
+          {
+            "bit": 15,
+            "name": "Trans"
+          },
+          {
+            "bit": 23,
+            "name": "Espada Mágica"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 41,
+        "weapon": "Balmung",
+        "kind": "physical",
+        "dex_coefficient": 0.22,
+        "str_coefficient": 0.27,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Confiança"
+          },
+          {
+            "bit": 15,
+            "name": "Trans"
+          },
+          {
+            "bit": 23,
+            "name": "Espada Mágica"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 44,
+        "weapon": "Lanca",
+        "kind": "magic",
+        "dex_coefficient": 2.0,
+        "int_coefficient": 2.5,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Confiança"
+          },
+          {
+            "bit": 15,
+            "name": "Trans"
+          },
+          {
+            "bit": 23,
+            "name": "Espada Mágica"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 47,
+        "weapon": "Cajado/Cetro",
+        "kind": "magic",
+        "dex_coefficient": 1.2,
+        "int_coefficient": 1.5,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Confiança"
+          },
+          {
+            "bit": 15,
+            "name": "Trans"
+          },
+          {
+            "bit": 23,
+            "name": "Espada Mágica"
+          }
+        ]
+      }
+    ],
+    "Foema": [
+      {
+        "weapon_unique": 43,
+        "weapon": "Garra",
+        "kind": "physical",
+        "dex_coefficient": 0.5,
+        "str_coefficient": 0.55,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Blood"
+          },
+          {
+            "bit": 15,
+            "name": "8ª Black"
+          },
+          {
+            "bit": 23,
+            "name": "8ª Magia Especial"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 42,
+        "weapon": "Arco",
+        "kind": "physical",
+        "dex_coefficient": 0.75,
+        "str_coefficient": 0.8,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Blood"
+          },
+          {
+            "bit": 15,
+            "name": "8ª Black"
+          },
+          {
+            "bit": 23,
+            "name": "8ª Magia Especial"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 46,
+        "weapon": "Hermai",
+        "kind": "physical",
+        "dex_coefficient": 0.4,
+        "str_coefficient": 0.45,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Blood"
+          },
+          {
+            "bit": 15,
+            "name": "8ª Black"
+          },
+          {
+            "bit": 23,
+            "name": "8ª Magia Especial"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 48,
+        "weapon": "Espada 2 maos",
+        "kind": "physical",
+        "dex_coefficient": 0.5,
+        "str_coefficient": 0.55,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Blood"
+          },
+          {
+            "bit": 15,
+            "name": "8ª Black"
+          },
+          {
+            "bit": 23,
+            "name": "8ª Magia Especial"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 49,
+        "weapon": "Martelo",
+        "kind": "physical",
+        "dex_coefficient": 0.6,
+        "str_coefficient": 0.65,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Blood"
+          },
+          {
+            "bit": 15,
+            "name": "8ª Black"
+          },
+          {
+            "bit": 23,
+            "name": "8ª Magia Especial"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 45,
+        "weapon": "Caliburn",
+        "kind": "physical",
+        "dex_coefficient": 0.55,
+        "str_coefficient": 0.6,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Blood"
+          },
+          {
+            "bit": 15,
+            "name": "8ª Black"
+          },
+          {
+            "bit": 23,
+            "name": "8ª Magia Especial"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 41,
+        "weapon": "Balmung",
+        "kind": "physical",
+        "dex_coefficient": 0.5,
+        "str_coefficient": 0.55,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Blood"
+          },
+          {
+            "bit": 15,
+            "name": "8ª Black"
+          },
+          {
+            "bit": 23,
+            "name": "8ª Magia Especial"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 44,
+        "weapon": "Lanca",
+        "kind": "magic",
+        "dex_coefficient": 6.3,
+        "int_coefficient": 4.2,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Blood"
+          },
+          {
+            "bit": 15,
+            "name": "8ª Black"
+          },
+          {
+            "bit": 23,
+            "name": "8ª Magia Especial"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 47,
+        "weapon": "Cajado/Cetro",
+        "kind": "magic",
+        "dex_coefficient": 6.3,
+        "int_coefficient": 4.2,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "Blood"
+          },
+          {
+            "bit": 15,
+            "name": "8ª Black"
+          },
+          {
+            "bit": 23,
+            "name": "8ª Magia Especial"
+          }
+        ]
+      }
+    ],
+    "BeastMaster": [
+      {
+        "weapon_unique": 43,
+        "weapon": "Garra",
+        "kind": "physical",
+        "dex_coefficient": 0.42,
+        "str_coefficient": 0.46,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "BM Elemental"
+          },
+          {
+            "bit": 15,
+            "name": "BM Evocações"
+          },
+          {
+            "bit": 23,
+            "name": "BM Natureza"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 42,
+        "weapon": "Arco",
+        "kind": "physical",
+        "dex_coefficient": 0.68,
+        "str_coefficient": 0.72,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "BM Elemental"
+          },
+          {
+            "bit": 15,
+            "name": "BM Evocações"
+          },
+          {
+            "bit": 23,
+            "name": "BM Natureza"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 46,
+        "weapon": "Hermai",
+        "kind": "physical",
+        "dex_coefficient": 0.44,
+        "str_coefficient": 0.48,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "BM Elemental"
+          },
+          {
+            "bit": 15,
+            "name": "BM Evocações"
+          },
+          {
+            "bit": 23,
+            "name": "BM Natureza"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 48,
+        "weapon": "Espada 2 maos",
+        "kind": "physical",
+        "dex_coefficient": 0.41,
+        "str_coefficient": 0.46,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "BM Elemental"
+          },
+          {
+            "bit": 15,
+            "name": "BM Evocações"
+          },
+          {
+            "bit": 23,
+            "name": "BM Natureza"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 49,
+        "weapon": "Martelo",
+        "kind": "physical",
+        "dex_coefficient": 0.65,
+        "str_coefficient": 0.7,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "BM Elemental"
+          },
+          {
+            "bit": 15,
+            "name": "BM Evocações"
+          },
+          {
+            "bit": 23,
+            "name": "BM Natureza"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 45,
+        "weapon": "Caliburn",
+        "kind": "physical",
+        "dex_coefficient": 0.22,
+        "str_coefficient": 0.32,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "BM Elemental"
+          },
+          {
+            "bit": 15,
+            "name": "BM Evocações"
+          },
+          {
+            "bit": 23,
+            "name": "BM Natureza"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 41,
+        "weapon": "Balmung",
+        "kind": "physical",
+        "dex_coefficient": 0.22,
+        "str_coefficient": 0.32,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "BM Elemental"
+          },
+          {
+            "bit": 15,
+            "name": "BM Evocações"
+          },
+          {
+            "bit": 23,
+            "name": "BM Natureza"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 44,
+        "weapon": "Lanca",
+        "kind": "magic",
+        "dex_coefficient": 7.0,
+        "int_coefficient": 6.0,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "BM Elemental"
+          },
+          {
+            "bit": 15,
+            "name": "BM Evocações"
+          },
+          {
+            "bit": 23,
+            "name": "BM Natureza"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 47,
+        "weapon": "Cajado/Cetro",
+        "kind": "magic",
+        "dex_coefficient": 6.8,
+        "int_coefficient": 5.8,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "BM Elemental"
+          },
+          {
+            "bit": 15,
+            "name": "BM Evocações"
+          },
+          {
+            "bit": 23,
+            "name": "BM Natureza"
+          }
+        ]
+      }
+    ],
+    "Huntress": [
+      {
+        "weapon_unique": 43,
+        "weapon": "Garra",
+        "kind": "physical",
+        "dex_coefficient": 0.49,
+        "str_coefficient": 0.53,
+        "gates": [
+          {
+            "bit": 2,
+            "name": "(sem comentario)"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 42,
+        "weapon": "Arco",
+        "kind": "physical",
+        "dex_coefficient": 0.68,
+        "str_coefficient": 0.72,
+        "gates": [
+          {
+            "bit": 2,
+            "name": "(sem comentario)"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 46,
+        "weapon": "Hermai",
+        "kind": "physical",
+        "dex_coefficient": 0.53,
+        "str_coefficient": 0.57,
+        "gates": [
+          {
+            "bit": 2,
+            "name": "(sem comentario)"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 48,
+        "weapon": "Espada 2 maos",
+        "kind": "physical",
+        "dex_coefficient": 0.51,
+        "str_coefficient": 0.55,
+        "gates": [
+          {
+            "bit": 2,
+            "name": "(sem comentario)"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 49,
+        "weapon": "Martelo",
+        "kind": "physical",
+        "dex_coefficient": 0.47,
+        "str_coefficient": 0.51,
+        "gates": [
+          {
+            "bit": 2,
+            "name": "(sem comentario)"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 45,
+        "weapon": "Caliburn",
+        "kind": "physical",
+        "dex_coefficient": 0.27,
+        "str_coefficient": 0.37,
+        "gates": [
+          {
+            "bit": 2,
+            "name": "(sem comentario)"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 41,
+        "weapon": "Balmung",
+        "kind": "physical",
+        "dex_coefficient": 0.27,
+        "str_coefficient": 0.37,
+        "gates": [
+          {
+            "bit": 2,
+            "name": "(sem comentario)"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 44,
+        "weapon": "Lanca",
+        "kind": "magic",
+        "dex_coefficient": 40.0,
+        "int_coefficient": 20.0,
+        "gates": [
+          {
+            "bit": 2,
+            "name": "(sem comentario)"
+          }
+        ]
+      },
+      {
+        "weapon_unique": 47,
+        "weapon": "Cajado/Cetro",
+        "kind": "magic",
+        "dex_coefficient": 40.0,
+        "int_coefficient": 20.0,
+        "gates": [
+          {
+            "bit": 2,
+            "name": "(sem comentario)"
+          }
+        ]
+      },
+      {
+        "weapon_unique": null,
+        "weapon": "(qualquer)",
+        "kind": "flat_damage",
+        "flat_damage": 200,
+        "gates": [
+          {
+            "bit": 7,
+            "name": "(sem comentario)"
+          }
+        ]
+      }
+    ]
+  }
+}

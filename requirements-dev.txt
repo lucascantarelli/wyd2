@@ -1,0 +1,10 @@
+# Ferramentas de desenvolvimento e qualidade (nao entram no runtime).
+#
+# Uso:
+#   python -m venv .venv
+#   .venv/Scripts/python -m pip install -r requirements.txt -r requirements-dev.txt
+#   .venv/Scripts/ruff check .
+#   .venv/Scripts/python -m pytest tests -q
+
+pytest>=9.2
+ruff>=0.17

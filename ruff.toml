@@ -1,0 +1,19 @@
+# Gate de lint Python do projeto (R00 / R13).
+#
+# O conjunto abaixo e explicito de proposito: sem configuracao de projeto, o
+# `ruff` herda regras do ambiente de quem roda, e o resultado do gate passa a
+# depender da maquina. E4/E7/E9/F sao o conjunto classico (pycodestyle de erro
+# e pyflakes); ampliar regras e uma decisao separada, com correcao em lote.
+#
+# Uso: ruff check .        (lint — gate)
+#      ruff format --check .  (formatacao — ainda nao e gate; ver R00)
+
+target-version = "py314"
+line-length = 100
+
+[lint]
+select = ["E4", "E7", "E9", "F"]
+
+[lint.per-file-ignores]
+# Scripts de extracao ajustam sys.path antes de importar modulos vizinhos.
+"scripts/*.py" = ["E402"]

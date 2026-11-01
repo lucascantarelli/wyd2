@@ -1,0 +1,3 @@
+# Runtime do importador. O codigo funciona sem esta dependencia (fallback
+# PBKDF2-HMAC-SHA256, 600k iteracoes), mas argon2id e o alvo de producao.
+argon2-cffi>=23.1.0
